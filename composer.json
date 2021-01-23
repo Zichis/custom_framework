@@ -1,0 +1,11 @@
+{
+    "name": "ezichi/custom_framework",
+    "description": "A custom PHP Framework from tutorial",
+    "authors": [
+        {
+            "name": "Ezichi Ebere",
+            "email": "tripleee@yahoo.co.uk"
+        }
+    ],
+    "require": {}
+}
