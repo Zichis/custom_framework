@@ -7,5 +7,10 @@
             "email": "tripleee@yahoo.co.uk"
         }
     ],
+    "autoload": {
+      "psr-4": {
+        "App\\": "./src"
+      }
+    },
     "require": {}
 }
