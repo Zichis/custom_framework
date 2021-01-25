@@ -9,10 +9,12 @@ class Router
 {
   protected array $routes = [];
   protected Request $request;
+  protected Response $response;
 
-  function __construct(Request $request)
+  function __construct(Request $request, Response $response)
   {
     $this->request = $request;
+    $this->response = $response;
   }
 
   public function get($path, $callback)
@@ -27,6 +29,8 @@ class Router
     $callback = $this->routes[$method][$path] ?? false;
 
     if ($callback === false) {
+      $this->response->setStatusCode(404);
+
       return "404 - Not found!";
     }
 
