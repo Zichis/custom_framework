@@ -7,7 +7,7 @@ namespace App\Controllers;
  */
 class ContactController
 {
-  static public function send()
+  public function send()
   {
     return "We are in controller!";
   }
