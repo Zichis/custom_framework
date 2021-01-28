@@ -3,21 +3,21 @@
 namespace App\Controllers;
 
 use App\Core\Application;
+use App\Core\Controller;
 use App\Core\Request;
 
 /**
  * @author Ezichi Ebere
  */
-class ContactController
+class ContactController extends Controller
 {
-  public function send(Request $request)
+  public function index(Request $request)
   {
     if ($request->isPost()) {
       echo "It is post!";
       die;
     }
-    var_dump($request->getBody());
-    die;
-    return "We are in controller!";
+
+    return $this->render('contact');
   }
 }
