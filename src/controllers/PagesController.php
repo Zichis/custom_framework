@@ -3,11 +3,12 @@
 namespace App\Controllers;
 
 use App\Core\Application;
+use App\Core\Controller;
 
 /**
  * @author Ezichi Ebere
  */
-class PagesController
+class PagesController extends Controller
 {
   public function index()
   {
@@ -15,6 +16,6 @@ class PagesController
       'name' => "Alili"
     );
 
-    return Application::$app->router->renderView('home', $data);
+    return $this->render('home', $data);
   }
 }
