@@ -13,6 +13,8 @@ class ContactController extends Controller
 {
   public function index(Request $request)
   {
+    $this->setLayout('main');
+
     if ($request->isPost()) {
       echo "It is post!";
       die;
