@@ -9,6 +9,6 @@ use App\Controllers\PagesController;
 $app = new Application(dirname(__DIR__));
 $app->router->get('/', [PagesController::class, 'index']);
 $app->router->get('/users', 'users');
-$app->router->get('/contact', 'contact');
-$app->router->post('/contact', [ContactController::class, 'send']);
+$app->router->get('/contact', [ContactController::class, 'index']);
+$app->router->post('/contact', [ContactController::class, 'index']);
 $app->run();
